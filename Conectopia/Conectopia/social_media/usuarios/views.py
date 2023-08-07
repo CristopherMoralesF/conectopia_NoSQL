@@ -147,7 +147,7 @@ def updatePassword(request):
 def deleteUser(request):
     if request.method == 'POST':
         
-        #Recover the User from the session variables. 
+        #Recover the User for the session variables. 
         userID = request.session['userID']
         userID = userID['$oid']
         user = Usuarios.objects.get(pk = ObjectId(userID))
